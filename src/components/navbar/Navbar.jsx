@@ -43,12 +43,11 @@ function Navbar() {
         <Link href="/" className={style.logo}>Lamania</Link>
           <div className={style.links}>
             {links.map(link =>(
-              <Link className={style.link} key={link.id} href={link.url}>{link.title}</Link>
+              <Link className={style.link} key={link.id} href={link.url} >{link.title} </Link>
             ))
             }
             <button className={style.logout} onClick={()=>console.log("Logout succesfully")}>Logout</button>
           </div>
-         
     </div>
   );
 }
