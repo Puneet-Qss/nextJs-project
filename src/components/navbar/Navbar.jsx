@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import style from './navbar.module.css';
+import DarkModeToggel from '../DarkMode/DarkModeToggel';
 
 function Navbar() {
   console.log("Hey this is an SSR")
@@ -41,7 +42,9 @@ function Navbar() {
   return (
     <div className={style.container}>
         <Link href="/" className={style.logo}>Lamania</Link>
+         
           <div className={style.links}>
+            <DarkModeToggel />
             {links.map(link =>(
               <Link className={style.link} key={link.id} href={link.url} >{link.title} </Link>
             ))
